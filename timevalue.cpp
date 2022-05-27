@@ -85,20 +85,24 @@ int main()
     cout << "Press [1] Present Value, [2] Future Value, [3] Future Value Annuities, [4] Present Value Annuities" << endl;
     cin >> option;
 
-    if (option == 1)
-    {
-        PresentValue();
-    }
-    else if (option == 2)
-    {
-        FutureValue();
-    }
-    else if (option == 3)
-    {
-        FutureValueAnnuities();
-    }
-    else if (option == 4)
-    {
-        cout << "Still in development";
-    }
+   switch (option)
+   {
+        case 1:
+            PresentValue();
+            break;
+        case 2:
+            FutureValue();
+            break;
+        case 3:
+            FutureValueAnnuities();
+            break;
+        case 4:
+            cout << "Still in development";
+            break;
+        default:
+            cout << "Unrecognized key";
+            cin >> endProgram;
+   }
+
+
 }
